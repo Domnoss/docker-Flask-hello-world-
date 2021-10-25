@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  flask:
+    build:
+      context: .
+    hostname: flask-hello-world
+    restart: unless-stopped
+    ports:
+      - 20200:5000
+
+    volumes:
+      - ./:/app
